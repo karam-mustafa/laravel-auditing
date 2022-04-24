@@ -554,7 +554,7 @@ trait Auditable
     /**
      * {@inheritdoc}
      */
-    public function transitionTo(Contracts\Audit $audit, bool $old = false): Contracts\Auditable
+    public function transitionInTo(Contracts\Audit $audit, bool $old = false): Contracts\Auditable
     {
         // The Audit must be for an Auditable model of this type
         if ($this->getMorphClass() !== $audit->auditable_type) {
